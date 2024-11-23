@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Tanker-Regular;
+  background-color: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  height: 120vh
+}
+
+.app-container {
+  text-align: center;
+  
+}
+
+/* Header */
+.header {
+  background-color: #4caf50;
+  color: white;
+  padding: 1em 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.nav-bar button {
+  background-color: #45a049;
+  color: white;
+  border: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-bar button:hover {
+  background-color: #367c39;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 500px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  flex: 1; /* Takes remaining space between header and footer */
+  margin-bottom: 20px; /* Ensures some space before footer */
+  overflow: auto;
+}
+
+.form-container {
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 16px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: #367c39;
+}
+
+/* Footer */
+.footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+/* Connect Wallet Button */
+
+
+
