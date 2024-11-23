@@ -10,15 +10,15 @@ import { toast } from "react-hot-toast";
 import { LENDINGANDBORROWING, LENDINGANDBORROWINGABI } from "../abi/constant";
 import { useState } from "react";
 
-
 function RepayLoan() {
-
-
+  const [value, setValue] = useState("");
 
   const { writeContractAsync, isPending } = useWriteContract();
   const CONTRACT_ADDRESS = LENDINGANDBORROWING;
-  const HandleRepay = async () => {
+  const HandleRepay = async (e, value) => {
     e.preventDefault();
+    console.log("HandleRepay", value);
+
     try {
       await toast.promise(
         (async () => {
@@ -54,8 +54,18 @@ function RepayLoan() {
       </h2>
       <form>
         <label>Repayment Amount:-</label>
-        <input type="number" placeholder="Enter repayment amount" />
-        <button type="submit" onClick={(e) => e.preventDefault()}>
+        <input
+          type="number"
+          placeholder="Enter repayment amount"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <button
+          type="submit"
+          onClick={(e) => {
+            HandleRepay(e, value);
+          }}
+        >
           Repay Loan
         </button>
       </form>

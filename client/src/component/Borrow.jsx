@@ -11,11 +11,14 @@ import { LENDINGANDBORROWING, LENDINGANDBORROWINGABI } from "../abi/constant";
 import { useState } from "react";
 
 function Borrow() {
+  const [value, setValue] = useState("");
+
   const { writeContractAsync, isPending } = useWriteContract();
   const CONTRACT_ADDRESS = LENDINGANDBORROWING;
 
-  const handleBorrowingClick = async () => {
-    console.log("Borrowing button clicked");
+  const handleBorrowingClick = async (e, value) => {
+    e.preventDefault();
+    console.log("Borrowing button clicked", value);
     try {
       await toast.promise(
         (async () => {
@@ -52,8 +55,19 @@ function Borrow() {
       </h2>
       <form>
         <label>Amount to Borrow:-</label>
-        <input type="number" placeholder="Enter amount" />
-        <button type="submit" onClick={(e) => e.preventDefault()}>
+        <input
+          type="number"
+          placeholder="Enter amount"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <button
+          type="submit"
+          onClick={(e) => {
+            handleBorrowingClick(e, value);
+          }}
+        >
+          {" "}
           Borrow
         </button>
       </form>
