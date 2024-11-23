@@ -2,6 +2,7 @@ import React, { useState } from "react";
 //import { ethers } from "ethers";
 import "./wallet.css";
 
+
 const Wallet = ({ sendWalletBalance }) => {
   const [defaultAccount, setDefaultAccount] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);

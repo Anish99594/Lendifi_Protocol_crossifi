@@ -1,9 +1,11 @@
 .connect {
-    position: fixed;
-    top: 20px; /* Adjust distance from the top */
-    right: 20px; /* Adjust distance from the right */
+    /* position: fixed;
+    top: 20px; 
+    right: 20px;  */
     padding: 10px 20px;
-    background-color: #4caf50;
+    /* background-color: #4caf50; */
+    background-color: #e0e496c1;
+    
     color: white;
     border: none;
     border-radius: 5px;
@@ -14,7 +16,7 @@
   }
   
   .connect:hover {
-    background-color: #367c39;
+    background-color: #bdb890;
   }
   
   .connect:focus {

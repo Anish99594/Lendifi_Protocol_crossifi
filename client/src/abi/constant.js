@@ -1,0 +1,6 @@
+import MAINABI from "../abi/lendingandborrowing.json"
+
+export const LENDINGANDBORROWING = "0xd9aD1BD6203D46C32Fd053F45608864C5C523153";
+
+export const LENDINGANDBORROWINGABI = MAINABI;
+
